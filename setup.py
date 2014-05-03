@@ -29,4 +29,5 @@ setup(
         'Topic :: Utilities',
     ],
     keywords='imgur api wrapper PyImgur cli',
+    scripts=['bin/imgur-share'],
 )
