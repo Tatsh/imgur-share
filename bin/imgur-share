@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     files = args.file
-    ret = 0
+    failed = False
 
     for f in files:
         try:
@@ -37,4 +37,8 @@ if __name__ == '__main__':
             print('%s -> %s' % (f.name, image.link))
         except HTTPError:
             print('Failed to upload %s' % (realpath(f.name)), file=sys.stderr)
+            failed = True
         f.close()
+
+    if failed:
+        sys.exit(1)
