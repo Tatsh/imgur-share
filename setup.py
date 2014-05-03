@@ -28,6 +28,7 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Topic :: Utilities',
     ],
+    url='https://pypi.python.org/pypi/ImgurShare',
     keywords='imgur api wrapper PyImgur cli',
     scripts=['bin/imgur-share'],
 )
